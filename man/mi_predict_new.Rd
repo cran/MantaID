@@ -2,18 +2,20 @@
 % Please edit documentation in R/mi_predict_new.R
 \name{mi_predict_new}
 \alias{mi_predict_new}
-\title{Predict new data with trained learner.}
+\title{Predict new data with a trained learner.}
 \usage{
-mi_predict_new(data, learner)
+mi_predict_new(data, result, ifnet = F)
 }
 \arguments{
 \item{data}{A dataframe.}
 
-\item{learner}{A R6 class object.}
+\item{result}{The result object from a previous training.}
+
+\item{ifnet}{A boolean indicating if a neural network is used for prediction.}
 }
 \value{
 A data frame that contains features and 'predict' class.
 }
 \description{
-Predict new data with trained learner.
+Predict new data with a trained learner.
 }

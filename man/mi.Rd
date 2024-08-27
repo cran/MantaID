@@ -5,7 +5,6 @@
 \title{A wrapper function that executes MantaID workflow.}
 \usage{
 mi(
-  mi_data_allID,
   cores = NULL,
   levels = c("*", 0:9, letters, LETTERS, "_", ".", "-", " ", "/", "\\\\", ":"),
   ratio = 0.3,
@@ -18,13 +17,11 @@ mi(
 )
 }
 \arguments{
-\item{mi_data_allID}{IDs raw data.}
-
 \item{cores}{The number of cores used when balancing data.}
 
-\item{levels}{The vector that includes all the single character occurred in IDs.}
+\item{levels}{The vector that includes all the single characters occurred in IDs.}
 
-\item{ratio}{The ratio of test set.}
+\item{ratio}{The ratio of the test set.}
 
 \item{para_blc}{A logical value whether using parallel computing when balancing data.}
 

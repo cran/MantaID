@@ -1,8 +1,6 @@
 #' Plot correlation heatmap.
-#'
-#' @param data Data frame that including IDs' position features.
+#' @param data Data frame including IDs' position features.
 #' @param cls The name of the class column.
-#'
 #' @importFrom stats cor
 #' @importFrom grid unit
 #' @importFrom ggplot2 ggtitle unit xlab ylab
@@ -19,13 +17,16 @@
 #' data_num <- mi_to_numer(mi_data_procID)
 #' mi_plot_cor(data_num)
 mi_plot_cor <- function(data, cls = "class") {
+  #Select the data in columns other than the class column, convert these data to a numeric type, and then convert them to matrix form.
   cor_mt <- data %>%
     mutate(across(.cols = everything(), .fns = as.numeric)) %>%
     as.matrix() %>%
+    #To calculate the correlation, convert the "cor" to a data frame, replace the missing values in it with zeros, then convert it to will matrix form, merge the columns, remove the diagonal elements, and filter out the feature pairs that are greater than a threshold.
     cor() %>%
     as.data.frame() %>%
     mutate(across(.cols = everything(), .fns = replace_na, replace = 0)) %>%
     as.matrix()
+  #Plot correlation heatmap.
   heat <- ggcorrplot(cor_mt, show.diag = T) + theme_bw() + theme(
     axis.text.x = element_text(
       angle = 45,
