@@ -21,8 +21,3 @@ A list contains a train set and a test set.
 Data balance.
 Most classes adopt random undersampling, while a few classes adopt smote method to oversample to obtain relatively balanced data.
 }
-\examples{
-library(dplyr)
-data <- rename(iris, class = Species)
-mi_balance_data(data)
-}

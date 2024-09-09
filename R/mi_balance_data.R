@@ -10,10 +10,6 @@
 #' @importFrom mlr3 as_task_classif partition
 #' @importFrom dplyr slice bind_rows
 #' @importFrom magrittr set_names
-#' @examples
-#' library(dplyr)
-#' data <- rename(iris, class = Species)
-#' mi_balance_data(data)
 mi_balance_data <- function(data, ratio = 0.3, parallel = FALSE) {
   system.time({
     #The multicategorical data were balanced by random sampling of the undersampled samples and the oversampling part was sampled by the smote method to obtain relatively balanced data. Speedup usually occurs only if there are many classes using one of the slower resampling techniques.

@@ -1,7 +1,7 @@
 Package: MantaID
 Title: A Machine-Learning Based Tool to Automate the Identification of
         Biological Database IDs
-Version: 1.0.3
+Version: 1.0.4
 Authors@R: 
     c(person("Zhengpeng", "Zeng",email = "molaison@foxmail.com", role = c("aut","cre","ctb"),comment = c(ORCID = "0000-0001-7919-209X")),
     person("Longfei","Mao",email = "longfeimao99@gmail.com",role = c("aut","cph"),comment = c(ORCID = "0000-0003-0759-0501")),
@@ -20,7 +20,7 @@ Imports:
         ggplot2,data.table,magrittr,stringr,tibble,tidyr,tidyselect,ggcorrplot,reshape2,scutr,paradox,RColorBrewer,purrr,dplyr
 Suggests: mlr3hyperband,mlr3learners,ranger,rpart,xgboost
 NeedsCompilation: no
-Packaged: 2024-08-27 07:35:03 UTC; pc
+Packaged: 2024-09-09 07:07:26 UTC; pc
 Author: Zhengpeng Zeng [aut, cre, ctb]
     (<https://orcid.org/0000-0001-7919-209X>),
   Longfei Mao [aut, cph] (<https://orcid.org/0000-0003-0759-0501>),
@@ -29,4 +29,4 @@ Author: Zhengpeng Zeng [aut, cre, ctb]
   Xiting Wang [ctb] (<https://orcid.org/0009-0009-5235-0006>)
 Maintainer: Zhengpeng Zeng <molaison@foxmail.com>
 Repository: CRAN
-Date/Publication: 2024-08-27 08:40:02 UTC
+Date/Publication: 2024-09-09 07:50:02 UTC
